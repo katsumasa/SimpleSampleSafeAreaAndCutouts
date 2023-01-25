@@ -8,9 +8,8 @@ UnityEngine.Screen.[safeArea](https://docs.unity3d.com/ja/current/ScriptReferenc
 ## 検証環境
 
 使用しているUnityのバージョンはUnity2021.3.13f1です。(スクリプトリファレンスにはsafeAreaはUnity2017.2、cutoutsはUnty2019.4から記載があります）
-Android,iOSプラットフォームに関して検証を行っており、Androidに関してはPixel3XL実機とAndroidエミュレーター、iOSに関してはiPhone11とSimulatorで実行確認をおこなっています。
-[こちら](https://developer.android.com/guide/topics/display-cutout?hl=ja)のページによるとAndroid 9(API レベル 28)以降の端末でcutoutsに対応しているそうです。
-
+Android,iOSプラットフォームに関して検証を行っており、Androidに関してはPixel3XL(実機)とAndroidエミュレーター、iOSに関してはiPhone11(実機)とiPhone14(Simulator)で確認をおこなっています。
+また、[こちら](https://developer.android.com/guide/topics/display-cutout?hl=ja)のページによるとAndroidでcutoutsはAndroid 9(API レベル 28)以降の端末でcutoutsで対応と記載がありますのでご注意下さい。
 
 ## 検証内容
 
@@ -50,11 +49,15 @@ Android,iOSプラットフォームに関して検証を行っており、Androi
 
 ### iOS
 
+iOSではcutoutsを取得するAPIをAppleが提供していない為、Unityの中で端末毎のパラメータを埋め込んでいます。その為、Unityのバージョンによってはcutoutsの値が取れない端末が発生します。
+Unity2021.3.13f1ではiPhone14系の端末のcutoutsの情報が含まれていません。
+詳細に関しては、Unityが出力したxcodeプロジェクトに含まれる、UnityView.mmで定義されているGetCutoutToScreenRatio()を確認して下さい。
+
 #### iPhone11
 
 <img width="200" alt="iPhone14Pro" src="https://user-images.githubusercontent.com/29646672/214514139-554df98f-969e-4b26-88ad-736981133559.png">
 
-#### Simulator(iPhone14Pro)
+#### iPhone14Pro(Simulator)
 
 <img width="200" alt="iPhone14Pro" src="https://user-images.githubusercontent.com/29646672/214476352-7cc785d8-d360-4050-8cec-bcc7c9c1bcf3.png">
 <img width="200" alt="iPhone14Pro" src="https://user-images.githubusercontent.com/29646672/214476491-06e96efb-1720-4aa4-a0eb-3a4325f681ec.png">
