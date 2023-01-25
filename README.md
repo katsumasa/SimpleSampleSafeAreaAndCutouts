@@ -8,7 +8,7 @@ UnityEngine.Screen.[safeArea](https://docs.unity3d.com/ja/current/ScriptReferenc
 ## 検証環境
 
 使用しているUnityのバージョンはUnity2021.3.13f1です。(スクリプトリファレンスにはsafeAreaはUnity2017.2、cutoutsはUnty2019.4から記載があります）
-Android,iOSプラットフォームに関して検証を行っており、Androidに関してはPixel3XL実機とAndroidエミュレーター、iOSに関してはSimulatorのみ実行確認をおこなっています。
+Android,iOSプラットフォームに関して検証を行っており、Androidに関してはPixel3XL実機とAndroidエミュレーター、iOSに関してはiPhone11とSimulatorで実行確認をおこなっています。
 [こちら](https://developer.android.com/guide/topics/display-cutout?hl=ja)のページによるとAndroid 9(API レベル 28)以降の端末でcutoutsに対応しているそうです。
 
 
@@ -49,6 +49,10 @@ Android,iOSプラットフォームに関して検証を行っており、Androi
 
 
 ### iOS
+
+#### iPhone11
+
+<img width="200" alt="iPhone14Pro" src="https://user-images.githubusercontent.com/29646672/214514139-554df98f-969e-4b26-88ad-736981133559.png">
 
 #### Simulator(iPhone14Pro)
 
